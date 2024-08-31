@@ -13,18 +13,19 @@
 <body>
     <div id="screens">
         <!-- Top Screen -->
-        <div id="top-screen" style="background: url('images/top.png') no-repeat center center; background-size: cover;">
-            <!-- Top screen content, if any, goes here -->
+        <div id="top-screen" style="background-color: black;">
+            <img src="top.png" alt="Top Screen Image" onerror="this.style.display='none'; displayNoImageMessage();" style="display:block; margin:auto;">
+            <p id="no-image-message" style="display:none; text-align:center; color:white;">Top screen image not found.</p>
         </div>
         
         <!-- Bottom Screen -->
-        <div id="bottom-screen" style="background-color: #FF00FF;">
-            <div id="tabs">
+        <div id="bottom-screen" style="background-color: #FF00FF; height: 100%;">
+            <div id="tabs" style="text-align: center; padding: 10px;">
                 <button onclick="loadTab('games')">GAMES</button>
                 <button onclick="loadTab('programs')">PROGRAMS</button>
                 <button onclick="loadTab('settings')">SETTINGS</button>
             </div>
-            <div id="content">
+            <div id="content" style="padding: 20px; text-align: center;">
                 <!-- Content for each tab will be loaded here -->
             </div>
         </div>
@@ -51,6 +52,10 @@
                 return settings;
             }, {});
             return settings;
+        }
+
+        function displayNoImageMessage() {
+            document.getElementById('no-image-message').style.display = 'block';
         }
     </script>
 </body>
