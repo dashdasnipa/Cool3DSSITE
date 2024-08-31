@@ -35,7 +35,7 @@
         function loadTab(tab) {
             let content = document.getElementById('content');
             if (tab === 'games') {
-                content.innerHTML = '<a href="/games/hangmangame/index.html">Play Hangman</a>';
+                content.innerHTML = '<a href="./games/hangmangame/index.html">Play Hangman</a>';
             } else if (tab === 'programs') {
                 content.innerHTML = '<p>No programs available</p>';
             } else if (tab === 'settings') {
@@ -43,6 +43,7 @@
                 content.innerHTML = `<p>Settings: ${JSON.stringify(settings)}</p>`;
             }
         }
+
 
         function getSettings() {
             // Retrieve settings from cookies
